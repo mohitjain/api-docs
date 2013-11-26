@@ -1,0 +1,81 @@
+<div id="apiDocContent">	
+<h1 class="mrgn_top">New doc</h1>
+	<%= form_for(@doc) do |f| %>
+	  <% if @doc.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@doc.errors.count, "error") %> prohibited this doc from being saved:</h2>
+
+	      <ul>
+	      <% @doc.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	  <div class="field">
+	    <%= f.label :title_short %><span class="hint">(For left sidebar)</span><br />
+	    <%= f.text_field :title_short %>
+	  </div>
+	 <div class="field">
+	    <%= f.label :category_id %><br />
+	    <%= f.select :category_id, Category.all.collect {|c| [ c.name.capitalize, c.id ] }.sort%>
+	  </div>
+	  <div class="field">
+	    <%= f.label :title_long %><span class="hint">(For Show page)</span><br />
+	    <%= f.text_area :title_long %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :description %><span class="hint">(For Show page, add some description)</span><br />
+	    <%= f.text_area :description %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :http_method %><span class="hint">(GET/POST)</span><br />
+	    <%= f.text_field :http_method %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :requires_authentication %><br />
+	    <%= f.text_field :requires_authentication %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :query_format %><span class="hint">(Standard Query format page)</span><br />
+	    <%= f.text_area :query_format %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :sample_query %><span class="hint">(please add a sample query)</span><br />
+	    <%= f.text_area :sample_query %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :parameters %><span class="hint">(What are the various parameters, Please use table to format in the editor)</span><br />
+	    <%= f.text_area :parameters %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :response_format %><br />
+	    <%= f.text_field :response_format %>
+	  </div>
+	<div class="field">
+	    <%= f.label :success_codes %><span class="hint">(What are the various Success Codes, and messages, Please use table to format in the editor)</span><br />
+	    <%= f.text_area :success_codes %>
+	  </div>
+	<div class="field">
+	    <%= f.label :error_codes %><span class="hint">(What are the various Error Codes, and messages, Please use table to format in the editor)</span><br />
+	    <%= f.text_area :error_codes %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :response_output_format %><span class="hint">(Paste a sample output here. Please install <a href="https://chrome.google.com/webstore/detail/chklaanhfefbnpoihckbnefhakgolnmc" target="_blank" style="color:red"> this </a>plugin chrome to format the output. )</span><br />
+	    <%= f.text_area :response_output_format %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+
+</div>
+</div>
+
+</div>
+<div style="clear: both"></div>
+</div>
+</div>

@@ -1,0 +1,41 @@
+<div id="apiDocContent">
+	<div class="title"><%= @doc.category.name %></div>
+	<div class="description"><%= @doc.title_long.html_safe unless @doc.title_long.nil? %> </div>
+	<div class="url"><%= @doc.query_format.html_safe unless @doc.query_format.nil? %></div>
+	<div class="description"><%= @doc.description.html_safe unless @doc.description.nil? %> </div>
+
+
+	<table>
+		<tr>
+			<th>HTTP Method</th>
+			<td><%= @doc.http_method.html_safe  unless @doc.http_method.nil? %></td>
+		</tr>
+		<tr>
+			<th>Requires Authentication</th>
+			<td><%= @doc.requires_authentication.html_safe unless @doc.requires_authentication.nil? %></td>
+		</tr>
+		<tr>
+			<th>Sample Query</th>
+			<td><%= @doc.sample_query.html_safe %></td>
+		</tr>
+	</table>
+	<div class="section">Parameters</div>
+	All parameters are optional, unless otherwise indicated.
+	<div><%= @doc.parameters.html_safe %></div>
+	<div class="section">Success Codes/Messages</div>
+	<div><%= @doc.success_codes.html_safe unless @doc.success_codes.nil? %></div>
+	<div class="section">Error Codes/Message</div>
+	<div><%= @doc.error_codes.html_safe unless @doc.error_codes.nil? %></div>
+
+	<div class="section">Response</div>
+	<div ><pre class="prettyprint"><%= @doc.response_output_format.html_safe  unless @doc.response_output_format.nil? %></pre></div>
+
+
+	<br />
+</div>
+</div>
+</div>
+<div style="clear: both"></div>
+</div>
+</div>
+

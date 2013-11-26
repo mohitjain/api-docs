@@ -1,0 +1,22 @@
+<div id="apiDocContent">
+	<div class="apiDocContent_table">
+		<h2 class="mrgn_top">Document Title</h2>
+		<% @docs.each do |doc| %>
+			<p><%= link_to doc.title_long.html_safe, doc, :class=> "bold" %></p>
+			<p><%= doc.description.html_safe %></p>
+			<div class="edit_action">
+				<%= link_to 'Edit', edit_doc_path(doc), :class=> "edit_btn" %>
+				<%= link_to 'Destroy', doc, :confirm => 'Are you sure?', :method => :delete, :class=> "edit_btn"  %>
+			</div>
+		<hr>
+		<% end %>
+
+	</div>
+
+</div>
+</div>
+
+</div>
+<div style="clear: both"></div>
+</div>
+</div>
