@@ -1,8 +1,10 @@
 Apidocs::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   resources :api_versions
 
   resources :categories
-
+  mount Ckeditor::Engine => "/ckeditor"
   resources :docs
   root :to => "docs#index"
   # The priority is based upon order of creation:

@@ -1,4 +1,4 @@
-<div id="apiDocContent">	
+<div id="apiDocContent">
 	<h1 class="mrgn_top">New doc</h1>
 	<%= form_for(@doc) do |f| %>
 	<% if @doc.errors.any? %>
@@ -33,11 +33,11 @@
 	</div>
 	<div class="field">
 		<%= f.label :title_long %><span class="hint"> Keep it like : How to get list of all the grades for a student</span><br />
-		<%= f.text_area :title_long %>
+		<%= f.cktext_area :title_long %>
 	</div>
 	<div class="field">
 		<%= f.label :description %><span class="hint">(Add some description. some use case of this api calls. Dont thing that its bit abvious. Put some description for other people.)</span><br />
-		<%= f.text_area :description %>
+		<%= f.cktext_area :description %>
 	</div>
 	<div class="field">
 		<%= f.label :http_method %><span class="hint">(GET/POST/PUT/DELETE/PATCH)</span><br />
@@ -48,34 +48,34 @@
 		<%= f.text_field :requires_authentication %>
 	</div>
 	<div class="field">
-		<%= f.label :query_format %><span class="hint">(Standard Query format page, Example: https://www.splashmath.com/api/v1/users/:user_id/grades?api_token=:api_token&access_token=:access_token)</span><br />
-		<%= f.text_area :query_format %>
+		<%= f.label :query_format %><span class="hint">(Standard Query format page, Example: https://www.example.com/api/v1/users/:user_id/grades?api_token=:api_token&access_token=:access_token)</span><br />
+		<%= f.cktext_area :query_format %>
 	</div>
 
 	<div class="field">
-		<%= f.label :sample_query %><span class="hint">(please add a sample query, try it should work with dummy database on local machine. Example: https://www.splashmath.com/api/v1/users/123/grades?api_token=my_api_token&access_token=my_token)  )</span><br />
-		<%= f.text_area :sample_query %>
+		<%= f.label :sample_query %><span class="hint">(please add a sample query, try it should work with dummy database on local machine. Example: https://www.example.com/api/v1/users/123/grades?api_token=my_api_token&access_token=my_token)  )</span><br />
+		<%= f.cktext_area :sample_query %>
 	</div>
 	<div class="field">
 		<%= f.label :parameters %><span class="hint">(What are the various parameters, Please use table to format in the editor)</span><br />
-		<%= f.text_area :parameters %>
+		<%= f.cktext_area :parameters %>
 	</div>
-	
+
 	<div class="field">
 		<%= f.label :response_format %><span class="hint">(JSON/XML)</span><br />
 		<%= f.text_field :response_format %>
 	</div>
 	<div class="field">
 		<%= f.label :success_codes %><span class="hint">(What are the various Success Codes, and messages, Please use table to format in the editor)</span><br />
-		<%= f.text_area :success_codes %>
+		<%= f.cktext_area :success_codes %>
 	</div>
 	<div class="field">
 		<%= f.label :error_codes %><span class="hint">(What are the various Error Codes, and messages, Please use table to format in the editor)</span><br />
-		<%= f.text_area :error_codes %>
+		<%= f.cktext_area :error_codes %>
 	</div>
 	<div class="field">
 		<%= f.label :response_output_format %><span class="hint">(Paste a sample output here. Please install <a href="https://chrome.google.com/webstore/detail/chklaanhfefbnpoihckbnefhakgolnmc" target="_blank" style="color:red"> this </a>plugin chrome to format the output. )</span><br />
-		<%= f.text_area :response_output_format %>
+		<%= f.cktext_area :response_output_format %>
 	</div>
 	<div class="actions">
 		<%= f.submit %>

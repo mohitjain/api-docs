@@ -23,3 +23,6 @@
 
 <%= link_to 'Edit', edit_api_version_path(@api_version) %> |
 <%= link_to 'Back', api_versions_path %>
+
+
+<%= render "docs/index", :docs => @api_version.docs %>

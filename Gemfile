@@ -8,7 +8,10 @@ gem 'rails', '3.2.13'
 gem 'mysql2'
 
 gem "will_paginate", "~> 3.0.pre2"
-  gem 'thin'
+gem 'thin'
+gem "ckeditor"
+gem "paperclip"
+gem "google-code-prettify-rails"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

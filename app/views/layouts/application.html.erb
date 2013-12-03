@@ -42,7 +42,7 @@
 								<h2><li><%= category.name %></li></h2>
 								<ul>
 									<% category.docs.each do |doc|%>
-									<li><%= link_to doc.title_short, doc %> (<% doc.api_versions.collect(&:name)%>)</li>
+									<li><%= link_to doc.title_short, doc %> (<%= doc.api_versions.collect(&:name).join(", ") %>)</li>
 									<% end %>
 								</ul>
 								<% end %>

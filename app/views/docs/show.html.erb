@@ -1,5 +1,5 @@
 <div id="apiDocContent">
-	<div class="title"><%= @doc.category.name %></div>
+	<div class="title"><%= @doc.category.name if @doc.category %></div>
 	<div class="description"><%= @doc.title_long.html_safe unless @doc.title_long.nil? %> </div>
 	<div class="url"><%= @doc.query_format.html_safe unless @doc.query_format.nil? %></div>
 	<div class="description"><%= @doc.description.html_safe unless @doc.description.nil? %> </div>
