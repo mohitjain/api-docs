@@ -11,12 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110523072738) do
+ActiveRecord::Schema.define(:version => 20131203075157) do
+
+  create_table "api_versions", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.date     "released_on"
+    t.integer  "active",      :default => 0
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "api_versions_docs", :id => false, :force => true do |t|
+    t.integer "api_version_id"
+    t.integer "doc_id"
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "docs", :force => true do |t|
@@ -30,8 +44,8 @@ ActiveRecord::Schema.define(:version => 20110523072738) do
     t.text     "parameters"
     t.string   "response_format"
     t.text     "response_output_format"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
     t.integer  "category_id"
     t.text     "success_codes"
     t.text     "error_codes"

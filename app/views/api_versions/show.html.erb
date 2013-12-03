@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @api_version.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @api_version.description %>
+</p>
+
+<p>
+  <b>Released on:</b>
+  <%= @api_version.released_on %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @api_version.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_api_version_path(@api_version) %> |
+<%= link_to 'Back', api_versions_path %>

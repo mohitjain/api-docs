@@ -1,5 +1,5 @@
 <%= form_for(@category) do |f| %>
-<h1 class="mrgn_top">New category</h1>
+
   <% if @category.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>

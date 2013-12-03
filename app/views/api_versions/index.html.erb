@@ -1,0 +1,29 @@
+<h1>Listing api_versions</h1>
+
+<table style="width:600px;">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Released on</th>
+    <th>Active</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @api_versions.each do |api_version| %>
+  <tr>
+    <td><%= api_version.name %></td>
+    <td><%= api_version.description %></td>
+    <td><%= api_version.released_on %></td>
+    <td><%= api_version.active %></td>
+    <td><%= link_to 'Show', api_version %></td>
+    <td><%= link_to 'Edit', edit_api_version_path(api_version) %></td>
+    <td><%= link_to 'Destroy', api_version, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Api version', new_api_version_path %>

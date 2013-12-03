@@ -9,7 +9,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: kwaab_api_docs_development
+  database: api_docs_development
   pool: 5
   username: root
   password:
@@ -22,7 +22,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: kwaab_api_docs_test
+  database: api_docs_test
   pool: 5
   username: root
   password:
@@ -32,8 +32,8 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: kwaab_api_docs_production
+  database: api_docs_production
   pool: 5
   username: root
-  password: c2h5oh
+  password:
   host: localhost

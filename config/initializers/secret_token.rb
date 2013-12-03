@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-TextAddaApi::Application.config.secret_token = 'a1c3376823dc122e68906ffd2607439776b098e315390391a9d0acfc38f784093c4b14523b5e394a2f4cce6614ea7179630164bf9c831260cd35d13c346da7fd'
+Apidocs::Application.config.secret_token = '938d1e2841394b77971f917b2ff64faa7def47d82c41fdef4c045536b13d8c7de6748135eb11cabf818c355ff5f5295bcb39164713edfece3b5befa6fc1b379e'

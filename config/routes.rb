@@ -1,4 +1,6 @@
-TextAddaApi::Application.routes.draw do
+Apidocs::Application.routes.draw do
+  resources :api_versions
+
   resources :categories
 
   resources :docs
